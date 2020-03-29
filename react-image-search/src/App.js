@@ -32,7 +32,7 @@ function App() {
     <div>
       <h1>{title}</h1>
       <form onSubmit={search}>
-        <label htmlFor="searchTerm">Suche nach einem Bild</label>
+        <label>Suche nach einem Bild</label>
         <input
           value={userInput}
           className="u-full-width"
