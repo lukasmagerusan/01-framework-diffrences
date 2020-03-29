@@ -1,0 +1,10 @@
+<h1>{{ title }}</h1>
+<form (ngSubmit)="onSubmit()">
+  <label for="searchTerm">Suche nach einem Bild</label>
+  <input [value]="searchTerm" (input)="searchTerm=$event.target.value" class="u-full-width">
+  <button type="submit">Suche</button>
+</form>
+<img *ngIf="loading" src="https://media3.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif">
+<section class="images">
+  <img *ngFor="let image of images" src="{{image.urls.regular}}">
+</section>
